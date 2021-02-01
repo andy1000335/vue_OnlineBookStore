@@ -1,0 +1,5 @@
+CREATE VIEW `AVG_SCORE`(`ISBN`, `Star`)
+AS SELECT    B.`ISBN`, AVG(S.`Star`)
+FROM         `BOOK` B, `SCORE` S
+WHERE        B.`ISBN`=S.`ISBN`
+GROUP BY     B.`ISBN`;
